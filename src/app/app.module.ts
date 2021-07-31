@@ -11,6 +11,9 @@ import { UserComponent } from './components/user/user.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { PostComponent } from './components/post/post.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
+import { UsersWithoutPostsComponent } from './components/users-without-posts/users-without-posts.component';
+import { UserWithoutPostComponent } from './components/user-without-post/user-without-post.component';
+import { UserWithPostDetailsComponent } from './components/user-with-post-details/user-with-post-details.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { PostDetailsComponent } from './components/post-details/post-details.com
     UserDetailsComponent,
     PostComponent,
     PostDetailsComponent,
+    UsersWithoutPostsComponent,
+    UserWithoutPostComponent,
+    UserWithPostDetailsComponent,
   ],
   imports: [
     BrowserModule,
