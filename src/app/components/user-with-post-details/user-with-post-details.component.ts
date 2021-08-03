@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {IUserWithPost} from "../../models/IUserWithPost";
 import {UserWithPostService} from "../../services/user-with-post.service";
+import {UserService} from "../../services/user.service";
+import {IUser} from "../../models/IUser";
 
 @Component({
   selector: 'app-user-with-post-details',
@@ -10,10 +12,11 @@ import {UserWithPostService} from "../../services/user-with-post.service";
 })
 export class UserWithPostDetailsComponent implements OnInit {
   userWithPost: IUserWithPost;
+  user: IUser;
 
-  constructor(private activatedRoute: ActivatedRoute, private userWithPostService: UserWithPostService) {
+  constructor(private activatedRoute: ActivatedRoute, private userService: UserService, private userWithPostService: UserWithPostService) {
     this.activatedRoute.params.subscribe(({id}) => {
-      console.log(id);
+        this.userService.getUserById(id).subscribe(value => this.user = value);
         this.userWithPostService.getUserWithPostById(id).subscribe(value => this.userWithPost = value);
       }
     )
@@ -22,7 +25,6 @@ export class UserWithPostDetailsComponent implements OnInit {
 
   ngOnInit() {
   }
-
 
 
 }
