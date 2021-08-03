@@ -17,8 +17,8 @@ export class UserWithPostService {
     return this.httpClient.get<IUser[]>(this.url);
   }
 
-  getUserWithPostById(id: number): Observable<IUserWithPost>{
-    return this.httpClient.get<IUserWithPost>(this.url + '/' + id + '/posts');
+  getUserWithPostById(id: number): Observable<IUserWithPost[]>{
+    return this.httpClient.get<IUserWithPost[]>(this.url + '/' + id + '/posts');
   }
 }
 

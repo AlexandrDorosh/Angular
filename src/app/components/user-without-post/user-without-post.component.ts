@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IUser} from "../../models/IUser";
 import {ActivatedRoute, Router} from "@angular/router";
+import {IUserWithPost} from "../../models/IUserWithPost";
 
 @Component({
   selector: 'app-user-without-post',

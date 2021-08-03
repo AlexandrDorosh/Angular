@@ -1,2 +1,7 @@
 <router-outlet></router-outlet>
-<app-user-without-post *ngFor="let item of users" [user] = "item"></app-user-without-post>
+
+<div *ngFor="let item of users">
+    <app-user-without-post [user] = "item"></app-user-without-post>
+</div>
+
+
