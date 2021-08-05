@@ -1,4 +1,4 @@
-export interface IUserWithPost{
+export interface IPost{
   userId: number,
   id: number,
   title: string,
