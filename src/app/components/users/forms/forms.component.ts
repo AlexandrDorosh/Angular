@@ -14,7 +14,7 @@ export class FormsComponent implements OnInit {
   users: IUser[];
 
   @Output()
-  event: new EventEmitter<number>();
+  event = new EventEmitter<number>();
 
   constructor(private userService : UserService) { }
 
