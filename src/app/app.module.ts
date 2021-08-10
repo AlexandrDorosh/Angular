@@ -7,10 +7,12 @@ import {RouterModule, Routes} from '@angular/router';
 import { FormsComponent } from './components/users/forms/forms.component';
 import {UsersComponent} from "./components/users/users.component";
 import {UserComponent} from "./components/users/user/user.component";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { Forms2Component } from './components/users/forms2/forms2.component';
 
 const routes: Routes = [
-  {path: 'users', component: UsersComponent}
+  {path: 'users', component: UsersComponent},
+  {path: 'users2', component: Forms2Component}
 ]
 
 
@@ -19,13 +21,15 @@ const routes: Routes = [
     AppComponent,
     FormsComponent,
     UsersComponent,
-    UserComponent
+    UserComponent,
+    Forms2Component
     ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

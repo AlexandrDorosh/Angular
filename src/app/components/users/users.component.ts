@@ -9,8 +9,8 @@ import {IUser} from "../../models";
 })
 export class UsersComponent implements OnInit {
 
-
   user: IUser;
+
   constructor(private userService : UserService) { }
 
   ngOnInit(): void {
