@@ -4,11 +4,12 @@
     <option *ngFor="let user of users" [ngValue]="user">{{user.name}}</option>
   </select>
 </form>
-<h3>User - {{f.value.user.id}}</h3>
-<p>Name: {{f.value.user.name}}</p>
-<p>UserName: {{f.value.user.username}}</p>
-<p>Email: {{f.value.user.email}}</p>
-<p>Address: {{f.value.user.address.city}}, {{f.value.user.address.street}}, {{f.value.user.address.suite}}</p>
-<p>Phone: {{f.value.user.phone}}</p>
-<p>Website: {{f.value.user.website}}</p>
-
+<div *ngIf="userDef">
+  <h3>User - {{f.value.user.id}}</h3>
+  <p>Name: {{f.value.user.name}}</p>
+  <p>UserName: {{f.value.user.username}}</p>
+  <p>Email: {{f.value.user.email}}</p>
+  <p>Address: {{f.value.user.address.city}}, {{f.value.user.address.street}}, {{f.value.user.address.suite}}</p>
+  <p>Phone: {{f.value.user.phone}}</p>
+  <p>Website: {{f.value.user.website}}</p>
+</div>

@@ -11,18 +11,7 @@ export class Forms2Component implements OnInit {
 
   users: IUser[];
 
-  userDef = {
-  id: 1,
-  name: "Leanne Graham",
-  username: "Bret",
-  email: "Sincere@april.biz",
-    address: {
-      street: "Kulas Light",
-      suite: "Apt. 556",
-      city: "Gwenborough"},
-  phone: "1-770-736-8031 x56442",
-  website: "hildegard.org"
-}
+  userDef: IUser;
 
 
 constructor(private userService : UserService) { }
